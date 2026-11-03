@@ -1,16 +1,16 @@
-// Queensland Gold Rushes, 1858 to 1877: information bank. All text, facts and questions.
+// The Queensland Gold Rush, 1858 to 1886: information bank. All text, facts and questions.
 // Every fact has a source key from src/sources.js. Nothing in this file is invented.
 // "discuss" and "teacherNotes" are removed from the student build by build.js.
 window.INFO = {
 id: 'gold',
-title: 'Queensland Gold Rushes, 1858 to 1877',
-subtitle: 'An information bank about Canoona, Gympie, Charters Towers and the Palmer River',
-description: 'A non-fiction information bank about the Queensland gold rushes at Canoona, Gympie, Charters Towers and the Palmer River: overview, timeline, places, people, real lives and sources. Includes Chinese miners and Aboriginal people.',
-dateLeft: 'Queensland · 1858 to 1877',
+title: 'The Queensland Gold Rush, 1858 to 1886',
+subtitle: 'An information bank about the goldfields from Canoona in 1858 to Croydon in 1886',
+description: 'A non-fiction information bank about the Queensland gold rush from Canoona in 1858 to Croydon in 1886: overview, map, timeline, places, people, real lives and sources. Includes Chinese miners and Aboriginal people.',
+dateLeft: 'Queensland · 1858 to 1886',
 dateRight: 'By Robin McKean',
 theme: '#231a10',
 footnote: 'Aboriginal and Torres Strait Islander readers are advised that this resource names people who have died. Everything in it comes from the sources listed on the Sources page.',
-footer: 'Queensland Gold Rushes. A non-fiction information bank by Robin McKean. This resource has no tracking and no cookies. An earlier choose-your-path story version is kept in the archive folder of the project on GitHub.',
+footer: 'The Queensland Gold Rush. A non-fiction information bank by Robin McKean. This resource has no tracking and no cookies. An earlier choose-your-path story version is kept in the archive folder of the project on GitHub.',
 warning: [
   'This resource is about gold rushes on the Country of Aboriginal people. It says that violence against Aboriginal people and racism against Chinese people happened. It does not describe the violence in detail.',
   'Aboriginal and Torres Strait Islander readers are advised that this resource names people who have died, and that the old records it draws on were written by Europeans.'
@@ -20,7 +20,7 @@ sourcesIntro: 'Every fact in this resource comes from one of these sources. News
 imageNote: 'All images are old photographs that are in the public domain, and each is credited. No images in this resource were made by artificial intelligence. There are no images of Aboriginal people.',
 overview: {
   image: 'gympie',
-  lead: 'Gold was found in Queensland many times between 1858 and 1877. Each time, thousands of people travelled to the new field. Each field was on Country where Aboriginal people already lived. Many of the diggers were British or Irish. Many were Chinese.',
+  lead: 'Gold was found in Queensland many times between 1858 and 1886. Each time, thousands of people travelled to the new field. Each field was on Country where Aboriginal people already lived. Many of the diggers were British or Irish. Many were Chinese.',
   glance: [
     { n: 'About 15,000', label: 'people at Canoona between September and December 1858', src: ['qpCanoona'] },
     { n: 'About 16,000', label: 'diggers on the Gympie field at the height of the rush', src: ['qsaGympie'] },
@@ -28,9 +28,9 @@ overview: {
     { n: 'About 100 tonnes', label: 'of gold from the Palmer River field in all', src: ['abs150'] }
   ],
   sections: [
-    { h: 'Queensland and the gold rushes', p: [
+    { h: 'Queensland and the gold rush', p: [
       'At the time of the first rush Queensland was still part of New South Wales. It became a separate colony on 10 December 1859. Early in 1866 the new colony was in a recession made worse by a long drought. A bank had closed and unemployed men were protesting in the streets of Brisbane. The government offered a £3,000 reward for a new goldfield.',
-      'The four main rushes were at Canoona near Rockhampton in 1858, Gympie in 1867, Charters Towers in 1871 and 1872, and the Palmer River in 1873 to 1877.'
+      'The first four large rushes were at Canoona near Rockhampton in 1858, Gympie in 1867, Charters Towers in 1871 and 1872, and the Palmer River in 1873 to 1877.'
     ], src: ['abs150', 'qsaGympie'] },
     { h: 'The rushes in turn', p: [
       'Canoona, 1858. A newspaper reported gold at Canoona on 28 July 1858. An official wrote that the ground taken up by the first diggers could give work to only a very small number of men. Queensland Places says the field was not a fraud, but it could not support anything like 15,000 people. Most of the thousands who came were returned south by the governments in Sydney and Melbourne. A few hundred stayed, and Rockhampton was proclaimed a town on 25 October 1858.',

@@ -9,7 +9,7 @@
 const fs = require('fs'), path = require('path');
 const root = __dirname, src = path.join(root, 'src');
 global.window = {};
-for (const f of ['info', 'sources', 'folklore']) { const fp = path.join(src, f + '.js'); if (fs.existsSync(fp)) require(fp); }
+for (const f of ['info', 'sources', 'folklore', 'fields']) { const fp = path.join(src, f + '.js'); if (fs.existsSync(fp)) require(fp); }
 const INFO = JSON.parse(JSON.stringify(window.INFO));
 
 function studentData(D) { delete D.discuss; delete D.teacherNotes; delete D.folkTeach; return D; }

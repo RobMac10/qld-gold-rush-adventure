@@ -1,18 +1,18 @@
-# Queensland Gold Rushes, 1858 to 1877
+# The Queensland Gold Rush, 1858 to 1886
 
-By Robin McKean. A non-fiction information bank about the Queensland gold rushes at Canoona, Gympie, Charters Towers and the Palmer River, including Chinese miners and Aboriginal people.
+By Robin McKean. A non-fiction information bank about the Queensland gold rush from Canoona in 1858 to Croydon in 1886, with an interactive map, including Chinese miners and Aboriginal people.
 
 - Student version: https://robmac10.github.io/qld-gold-rush-adventure/
 - Teacher version: https://robmac10.github.io/qld-gold-rush-adventure/teacher/ (not linked from the student version, and set to noindex). It adds discussion questions with suggested answers behind "Show" buttons.
 
 ## What is in it
-Overview, Timeline (dated events, each with a short explanation and its source), Places, People and groups (real ones only), Real lives (short documented accounts, with a person's own words only where a source records them), Did you know, and Sources (including where sources disagree). There are no invented characters, no story and no newspaper headlines.
+Overview, Map (an interactive map with the goldfields appearing decade by decade, and a list of the same fields), Timeline (dated events, each with a short explanation and its source), Places, People and groups (real ones only), Real lives (short documented accounts, with a person's own words only where a source records them), Did you know, and Sources (including where sources disagree). There are no invented characters, no story and no newspaper headlines.
 
 ## Content warning and review
-This resource may contain names and images of deceased Aboriginal and Torres Strait Islander people (and, for the sugar resource, South Sea Islander people). It has **not yet been reviewed** by community members. Please seek review, for example from the Darumbal, Kabi Kabi (Gubbi Gubbi), Gudjal and Palmer River Traditional Owners, before classroom use.
+This resource may contain names and images of deceased Aboriginal and Torres Strait Islander people (and, for the sugar resource, South Sea Islander people). It has **not yet been reviewed** by community members. Please seek review, for example from the Darumbal, Kabi Kabi (Gubbi Gubbi), Gudjal and Palmer River Traditional Owners, and the Traditional Owners of the later fields (Bailai and Gooreng Gooreng, Gangulu, Ewamian, Kuku Djungan and Tagalaka), before classroom use.
 
 ## Editing
-Edit files in `src/` (`info.js` holds all text, facts and questions; `extra-sources.js` holds source notes; `app.js`, `index.html` and `styles.css` hold the page), then run `node build.js`. It writes the student version at the site root and the teacher version in `teacher/`. The student build removes all discussion questions, answers and teacher-only code. Do not edit the built files in the root or in `teacher/` directly.
+Edit files in `src/` (`info.js` holds the first text, facts and questions, and `fields.js` adds the later goldfields, the map data and more questions; `extra-sources.js` holds source notes; `app.js`, `index.html` and `styles.css` hold the page), then run `node build.js`. It writes the student version at the site root and the teacher version in `teacher/`. The student build removes all discussion questions, answers and teacher-only code. Do not edit the built files in the root or in `teacher/` directly.
 
 ## Archive
 The earlier choose-your-path story version is kept, not deleted. It is the git tag `story-version` and the folder `archive/story-version/`.

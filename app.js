@@ -63,7 +63,7 @@
   }
 
   var SECTIONS = [
-    ['#/', 'Overview'], ['#/timeline', 'Timeline'], ['#/places', 'Places'], ['#/people', 'People and groups'],
+    ['#/', 'Overview'], ['#/map', 'Map'], ['#/timeline', 'Timeline'], ['#/places', 'Places'], ['#/people', 'People and groups'],
     ['#/lives', 'Real lives'], ['#/know', 'Did you know'], ['#/folklore', 'Folklore and legends'], ['#/sources', 'Sources']
   ];
   
@@ -117,6 +117,7 @@
     kids.push(el('h2', { text: 'Explore' }));
     var tiles = el('div', { 'class': 'tiles' });
     var blurbs = {
+      '#/map': 'An interactive map of Queensland. Goldfields appear decade by decade, from the 1850s to the 1880s.',
       '#/timeline': 'Dated events, each with a short explanation and its source.',
       '#/places': 'The main places and what happened there.',
       '#/people': 'Real people, groups and organisations named in the sources.',
@@ -125,12 +126,133 @@
       '#/folklore': 'Yarns and legends from the period. All are labelled as unproven.',
       '#/sources': 'Every source used, and where sources disagree.'
     };
-    SECTIONS.slice(1, 8).forEach(function (s) {
+    SECTIONS.slice(1, 9).forEach(function (s) {
       tiles.appendChild(el('a', { 'class': 'tile', href: s[0] }, [el('b', { text: s[1] }), el('span', { text: blurbs[s[0]] })]));
     });
     kids.push(tiles);
     
     setPage(D.title, kids);
+  }
+
+  function svgEl(tag, attrs) {
+    var e = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    if (attrs) for (var k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+
+  function viewMap() {
+    var M = D.map, kids = [];
+    kids.push(p(M.intro[0], 'lead'));
+    kids.push(p(M.intro[1], 'bigpara'));
+    kids.push(p(M.intro[2]));
+    // Projection: simple equirectangular, scaled for the latitude of Queensland.
+    var W0 = 137.9, N0 = -10.4, S = 44, K = 0.94, VW = Math.round((154 - W0) * K * S), VH = Math.round((29.3 - 10.4) * S);
+    function X(lon) { return Math.round((lon - W0) * K * S * 10) / 10; }
+    function Y(lat) { return Math.round((N0 - lat) * S * 10) / 10; }
+    var fields = M.fields.slice().sort(function (a, b) { return (+a.year) - (+b.year); });
+    fields.forEach(function (f, i) { f.n = i + 1; });
+    var idx = 0, showAll = false;
+
+    var live = el('p', { 'class': 'maplive', role: 'status', 'aria-live': 'polite' });
+    var slider = el('input', { type: 'range', min: 0, max: M.decades.length - 1, step: 1, value: 0, id: 'decade-range', 'aria-describedby': 'maphelp' });
+    var sliderLabel = el('label', { 'for': 'decade-range', text: 'Decade' });
+    var prev = el('button', { type: 'button', 'class': 'btn small', text: '← Earlier' });
+    var next = el('button', { type: 'button', 'class': 'btn small', text: 'Later →' });
+    var decBtns = M.decades.map(function (d, i) {
+      var b = el('button', { type: 'button', 'class': 'btn small dec', 'aria-pressed': 'false', text: d[1] });
+      b.addEventListener('click', function () { go(i); });
+      return b;
+    });
+    var controls = el('div', { 'class': 'mapctl', role: 'group', 'aria-label': 'Choose a decade' }, [prev, el('div', { 'class': 'mapdecs' }, decBtns), next]);
+    var sliderRow = el('div', { 'class': 'maprange' }, [sliderLabel, slider]);
+    kids.push(controls);
+    kids.push(sliderRow);
+    kids.push(el('p', { id: 'maphelp', 'class': 'small', text: 'Use the slider, the decade buttons or the Earlier and Later buttons. Each field stays on the map once it has appeared.' }));
+    kids.push(live);
+
+    var svg = svgEl('svg', { viewBox: '0 0 ' + VW + ' ' + VH, role: 'group', 'aria-label': 'Map of Queensland with goldfields marked by number. The same information is in the list below the map.', 'class': 'qmap' });
+    var path = '';
+    M.outline.forEach(function (ring) {
+      ring.forEach(function (pt, i) { path += (i ? 'L' : 'M') + X(pt[0]) + ' ' + Y(pt[1]); });
+      path += 'Z';
+    });
+    svg.appendChild(svgEl('path', { d: path, 'class': 'qland' }));
+    var marks = {};
+    fields.forEach(function (f) {
+      // A few markers are nudged apart by a few pixels so that neighbours do not cover each other.
+      var nudge = { crocodile: [0, -5], mountmorgan: [0, 6] }[f.id] || [0, 0];
+      var g = svgEl('g', { 'class': 'mk', tabindex: '0', role: 'button', 'aria-label': f.n + '. ' + f.name + ', ' + f.year + '. Show details in the list.', transform: 'translate(' + (X(f.lon) + nudge[0]) + ' ' + (Y(f.lat) + nudge[1]) + ')' });
+      var off = { mountmorgan: [10, 10], crocodile: [-10, -2], canoona: [9, -9], etheridge: [-9, -4], gilberton: [-9, 10], charterstowers: [-10, 6] }[f.id] || [9, 5];
+      g.appendChild(svgEl('circle', { r: 6, 'class': 'mkdot' }));
+      var t = svgEl('text', { x: off[0], y: off[1], 'class': 'mknum' + (off[0] < 0 ? ' left' : '') });
+      t.textContent = f.n;
+      g.appendChild(t);
+      g.addEventListener('click', function () { choose(f); });
+      g.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(f); } });
+      svg.appendChild(g);
+      marks[f.id] = g;
+    });
+    kids.push(el('div', { 'class': 'mapwrap' }, [svg]));
+    kids.push(p(M.credit, 'small'));
+
+    var allBox = el('input', { type: 'checkbox', id: 'mapall' });
+    allBox.addEventListener('change', function () { showAll = allBox.checked; draw(); });
+    kids.push(el('h2', { text: 'List of goldfields' }));
+    kids.push(el('p', { 'class': 'small', text: 'This list has the same information as the map. For each field it gives the year, a short note and whose Country it is, with the source.' }));
+    kids.push(el('p', { 'class': 'mapall' }, [allBox, el('label', { 'for': 'mapall', text: ' Show all fields in the list, from every decade' })]));
+    var list = el('ol', { 'class': 'maplist' });
+    var items = {};
+    fields.forEach(function (f) {
+      var li = el('li', { id: 'mf-' + f.id, value: f.n, tabindex: '-1' });
+      li.appendChild(el('h3', null, [el('span', { 'class': 'mapyear', text: f.year }), document.createTextNode(' ' + f.name)]));
+      li.appendChild(el('span', { 'class': 'newtag', text: 'New in this decade', hidden: '' }));
+      li.appendChild(p(f.note));
+      var c = el('p', { 'class': 'country' }, [el('b', { text: 'Whose Country: ' }), document.createTextNode(f.country + ' ')]);
+      var sl = srcLinks(f.src); if (sl) c.appendChild(sl);
+      li.appendChild(c);
+      list.appendChild(li);
+      items[f.id] = li;
+    });
+    kids.push(list);
+    kids.push(el('p', { 'class': 'srcline' }, [srcLinks(M.src)]));
+    kids.push(p('Positions are approximate. A marker is a point on the map and not the extent of a goldfield or of anyone’s Country. The Country statements come from the sources named and have not been reviewed by Traditional Owners.', 'small'));
+
+    function choose(f) {
+      Object.keys(items).forEach(function (k) { items[k].classList.remove('sel'); });
+      var li = items[f.id];
+      if (li.hasAttribute('hidden')) { allBox.checked = true; showAll = true; draw(); }
+      li.classList.add('sel');
+      li.scrollIntoView({ block: 'center' });
+      li.focus({ preventScroll: true });
+    }
+    function draw() {
+      var dec = M.decades[idx][0], shown = 0, fresh = 0;
+      slider.value = idx;
+      slider.setAttribute('aria-valuetext', M.decades[idx][1]);
+      decBtns.forEach(function (b, i) { b.setAttribute('aria-pressed', i === idx ? 'true' : 'false'); });
+      prev.disabled = idx === 0; next.disabled = idx === M.decades.length - 1;
+      fields.forEach(function (f) {
+        var vis = f.decade <= dec, isNew = f.decade === dec;
+        if (vis) shown++;
+        if (isNew) fresh++;
+        var g = marks[f.id];
+        if (vis) { g.removeAttribute('hidden'); g.setAttribute('style', ''); g.setAttribute('class', 'mk' + (isNew ? ' fresh' : '')); g.setAttribute('tabindex', '0'); }
+        else { g.setAttribute('style', 'display:none'); g.setAttribute('tabindex', '-1'); }
+        var li = items[f.id], inList = showAll || vis;
+        if (inList) li.removeAttribute('hidden'); else li.setAttribute('hidden', '');
+        li.style.display = inList ? '' : 'none';
+        li.classList.toggle('isnew', isNew);
+        var tag = li.querySelector('.newtag');
+        if (isNew) tag.removeAttribute('hidden'); else tag.setAttribute('hidden', '');
+      });
+      live.textContent = M.decades[idx][1] + ': ' + shown + ' goldfield' + (shown === 1 ? '' : 's') + ' on the map, ' + fresh + ' new in this decade.';
+    }
+    function go(i) { idx = Math.max(0, Math.min(M.decades.length - 1, i)); draw(); }
+    slider.addEventListener('input', function () { go(+slider.value); });
+    prev.addEventListener('click', function () { go(idx - 1); });
+    next.addEventListener('click', function () { go(idx + 1); });
+    draw();
+    setPage(M.title, kids);
   }
 
   function viewTimeline() {
@@ -267,6 +389,7 @@
     var r = (location.hash || '#/').replace(/^#\/?/, '');
     renderNav(r);
     if (r === '') viewOverview();
+    else if (r === 'map') viewMap();
     else if (r === 'timeline') viewTimeline();
     else if (r === 'places') viewPlaces();
     else if (r === 'people') viewPeople();
