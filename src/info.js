@@ -1,0 +1,218 @@
+// Queensland Gold Rushes, 1858 to 1877: information bank. All text, facts and questions.
+// Every fact has a source key from src/sources.js. Nothing in this file is invented.
+// "discuss" and "teacherNotes" are removed from the student build by build.js.
+window.INFO = {
+id: 'gold',
+title: 'Queensland Gold Rushes, 1858 to 1877',
+subtitle: 'An information bank about Canoona, Gympie, Charters Towers and the Palmer River',
+description: 'A non-fiction information bank about the Queensland gold rushes at Canoona, Gympie, Charters Towers and the Palmer River: overview, timeline, places, people, real lives and sources. Includes Chinese miners and Aboriginal people.',
+dateLeft: 'Queensland · 1858 to 1877',
+dateRight: 'By Robin McKean',
+theme: '#231a10',
+footnote: 'Aboriginal and Torres Strait Islander readers are advised that this resource names people who have died. Everything in it comes from the sources listed on the Sources page.',
+footer: 'Queensland Gold Rushes. A non-fiction information bank by Robin McKean. This resource has no tracking and no cookies. An earlier choose-your-path story version is kept in the archive folder of the project on GitHub.',
+warning: [
+  'This resource is about gold rushes on the Country of Aboriginal people. It says that violence against Aboriginal people and racism against Chinese people happened. It does not describe the violence in detail.',
+  'Aboriginal and Torres Strait Islander readers are advised that this resource names people who have died, and that the old records it draws on were written by Europeans.'
+],
+review: 'Review status: this resource has not yet been reviewed by Aboriginal community members. Review is being sought. Please tell the author if anything needs to change.',
+sourcesIntro: 'Every fact in this resource comes from one of these sources. Newspapers named in the sources can be read on Trove. Queensland State Archives holds the original government records.',
+imageNote: 'All images are old photographs that are in the public domain, and each is credited. No images in this resource were made by artificial intelligence. There are no images of Aboriginal people.',
+overview: {
+  image: 'gympie',
+  lead: 'Gold was found in Queensland many times between 1858 and 1877. Each time, thousands of people travelled to the new field. Each field was on Country where Aboriginal people already lived. Many of the diggers were British or Irish. Many were Chinese.',
+  glance: [
+    { n: 'About 15,000', label: 'people at Canoona between September and December 1858', src: ['qpCanoona'] },
+    { n: 'About 16,000', label: 'diggers on the Gympie field at the height of the rush', src: ['qsaGympie'] },
+    { n: '17,000 and 1,400', label: 'Chinese and European people on the Palmer River field by 1876', src: ['kirk93'] },
+    { n: 'About 100 tonnes', label: 'of gold from the Palmer River field in all', src: ['abs150'] }
+  ],
+  sections: [
+    { h: 'Queensland and the gold rushes', p: [
+      'At the time of the first rush Queensland was still part of New South Wales. It became a separate colony on 10 December 1859. Early in 1866 the new colony was in a recession made worse by a long drought. A bank had closed and unemployed men were protesting in the streets of Brisbane. The government offered a £3,000 reward for a new goldfield.',
+      'The four main rushes were at Canoona near Rockhampton in 1858, Gympie in 1867, Charters Towers in 1871 and 1872, and the Palmer River in 1873 to 1877.'
+    ], src: ['abs150', 'qsaGympie'] },
+    { h: 'The rushes in turn', p: [
+      'Canoona, 1858. A newspaper reported gold at Canoona on 28 July 1858. An official wrote that the ground taken up by the first diggers could give work to only a very small number of men. Queensland Places says the field was not a fraud, but it could not support anything like 15,000 people. Most of the thousands who came were returned south by the governments in Sydney and Melbourne. A few hundred stayed, and Rockhampton was proclaimed a town on 25 October 1858.',
+      'Gympie, 1867. James Nash found gold near the Mary River in August 1867. The Queensland State Archives says the surface gold was mined out within a year, so the miners went underground. The field was worked for about 60 years, and Gympie became known as the town that saved Queensland, because its gold helped end the recession.',
+      'Charters Towers, 1871 and 1872. A party of prospectors found gold in December 1871. By the end of September 1872 four crushing mills were working. Charters Towers became Queensland’s premier goldfield and for a time its second largest city.',
+      'Palmer River, 1873 to 1877. James Venture Mulligan and six companions found payable gold on 29 June 1873, and Cooktown was settled from October 1873 as the port. By 1876 the field was largely left to Chinese miners.'
+    ], src: ['slqCanoona', 'qpCanoona', 'csc', 'cqu', 'qsaGympie', 'ctc', 'abs150', 'kirk84', 'kirk93'] },
+    { h: 'Chinese miners', p: [
+      'In the 1871 census there were 3,305 Chinese people in Queensland. Many Chinese men went to the goldfields to earn money for their families. Many of those who came directly from China were sponsored by Chinese merchants and had to repay a debt before they could mine for themselves.',
+      'On the Palmer, Chinese miners worked ground that European miners had left. Many Europeans blamed them for high prices. Historian Noreen Kirkman says it would have been clear to most Europeans that Chinese people were the chief suppliers of vegetables and stores on the field. In 1876 and 1877 Queensland passed laws that made Chinese miners pay more and put a tax on each Chinese person arriving by ship.'
+    ], src: ['kirk93', 'kirk87', 'hodes'] },
+    { h: 'Aboriginal people and the goldfields', p: [
+      'Every field was on Aboriginal Country. On the Palmer, historian Noreen Kirkman writes that the Aboriginal way of watching and warning strangers did not survive the arrival of the first miners. The rivers were the main source of food for Aboriginal people, and the miners worked in the same rivers for gold. This is a main reason that conflict began. The Queensland Parks service says that game was killed or driven away, and that waterholes that had been clear became muddy.',
+      'On 27 September 1873 a group of miners forcibly removed Aboriginal people from a camp near where they were working. The Native Police were sent to protect the diggers and to carry out “dispersals”, the word used for breaking up Aboriginal camps. The numbers of Aboriginal people killed on the Palmer in the 1870s are not known.'
+    ], src: ['kirk84', 'parks'] },
+    { h: 'After the rushes', p: [
+      'Gympie’s deep mines kept the town going for decades. By 1910 mining at Charters Towers had slowed. Only about 500 new Chinese people arrived in Queensland between mid-1877 and 1881. Chinese communities continued in Queensland towns. In 1897 Queensland passed a law that gave the government wide control over the lives of Aboriginal people, together with later protection laws.'
+    ], src: ['qsaGympie', 'abs150', 'hodes', 'aph'] }
+  ],
+  words: [
+    ['Rush', 'A sudden movement of many people to a new goldfield.'],
+    ['Alluvial gold', 'Gold in creek gravel.'],
+    ['Reef gold', 'Gold in rock.'],
+    ['Warden', 'An official who ran a goldfield.'],
+    ['Miner’s right', 'A licence to mine.'],
+    ['Native Police', 'Aboriginal troopers led by European officers, who were used to break up Aboriginal camps.'],
+    ['Dispersal', 'The word used in the records for breaking up an Aboriginal camp by force.']
+  ],
+  left: [
+    'This resource does not describe violence against Aboriginal people or Chinese people in detail. It says that it happened, with the sources.',
+    'It gives no names or customs of Aboriginal peoples beyond what the sources say. The names of Aboriginal people who lived at each field are mostly not recorded in the sources read here.',
+    'It does not quote the insulting words about Aboriginal and Chinese people that appear in the records of the 1870s.'
+  ]
+},
+timeline: [
+  { date: '28 July 1858', title: 'Gold reported at Canoona', text: 'The Moreton Bay Courier reported that gold had been found at Canoona. Canoona is about 40 kilometres north-west of Rockhampton, on the Fitzroy River. The land around Rockhampton and the Fitzroy River is the Country of the Darumbal people.', src: ['slqCanoona', 'qpCanoona', 'darumbal'] },
+  { date: 'September to December 1858', title: 'About 15,000 people at Canoona', text: 'An estimated 15,000 people were at Canoona. An official wrote that the ground taken up by the first diggers could give work to only a very small number of men. Queensland Places says the field was not a fraud, but it could not support anything like 15,000 people.', flag: 'Only the part of the official’s letter that is quoted in a summary was read. The full letter has not been checked.', src: ['qpCanoona', 'csc'] },
+  { date: '25 October 1858', title: 'Rockhampton proclaimed a town', text: 'Most of the thousands who came to Canoona were returned south by the governments in Sydney and Melbourne. A few hundred stayed and started businesses. Rockhampton’s first land sales were on 17 and 18 November 1858.', src: ['cqu', 'qpCanoona'] },
+  { date: '10 December 1859', title: 'Queensland becomes a separate colony', text: 'Until then Queensland was part of New South Wales.', src: ['abs150'] },
+  { date: 'Early 1866', title: 'Recession and a reward', text: 'Queensland was in a recession made worse by a long drought. A bank had closed and unemployed men were protesting in the streets of Brisbane. The government offered a £3,000 reward for a new goldfield.', src: ['qsaGympie'] },
+  { date: 'August to October 1867', title: 'James Nash finds gold near Gympie', text: 'In August 1867 James Nash found gold near the Mary River. On 16 October 1867 he wrote to claim the reward. The town was first called Nashville and later Gympie, from the Gubbi Gubbi word gimpi gimpi, the name of a stinging tree.', flag: 'The Queensland State Archives says gold was noticed near Gympie in 1851 by John Carne Bidwill, so who “discovered” gold at Gympie is not simple.', src: ['qsaGympie', 'grmNash'] },
+  { date: '1868 to 1871', title: 'Miners go underground at Gympie', text: 'The Queensland State Archives says the surface gold was mined out within a year, so the miners went underground. At the height of the rush there were about 16,000 diggers on the field.', src: ['qsaGympie'] },
+  { date: 'December 1871', title: 'Gold found at Charters Towers', text: 'A party of prospectors found gold near a hill at what became Charters Towers. The party was Hugh Mosman, George Clarke, a man named Fraser, and an Aboriginal horse boy named Jupiter, who is credited with finding the gold-bearing quartz.', flag: 'The third man’s name is written as John Fraser in one source and James Fraser in another. Only “Fraser” is used here.', src: ['ctc', 'monJupiter'] },
+  { date: '26 January 1872', title: 'Claim made at Charters Towers', text: 'Hugh Mosman applied for a protection area for the claim. The place was named after the Gold Commissioner, W. S. E. M. Charters.', src: ['ctc'] },
+  { date: 'September 1872', title: 'Four crushing mills at Charters Towers', text: 'By the end of September 1872 four crushing mills were working.', src: ['ctc'] },
+  { date: '1872', title: 'The Hann expedition reports gold on the Palmer', text: 'The Hann expedition reported gold on the Palmer River before Mulligan’s find in 1873.', src: ['kirk84', 'kirk93', 'parks'] },
+  { date: '29 June 1873', title: 'Mulligan finds payable gold on the Palmer', text: 'James Venture Mulligan and six companions found payable alluvial gold. The rush began in September 1873, and Cooktown was settled from October 1873 as the port.', src: ['kirk84', 'kirk93', 'parks'] },
+  { date: '27 September 1873', title: 'Aboriginal people removed from a camp on the Palmer', text: 'A group of miners forcibly removed Aboriginal people from a camp near where they were working. According to Mulligan, the attack was not provoked, and it marked the start of the conflict. In the first month of the rush the Aboriginal people returned and frightened miners out of the gullies two or three times.', src: ['kirk84'] },
+  { date: 'May 1874', title: 'Chinese miners head for the Palmer', text: 'By late May 1874, Chinese miners and their families were heading to the Palmer from the Etheridge and Charters Towers fields.', src: ['kirk93'] },
+  { date: 'August to December 1874', title: 'Chinese population on the Palmer grows', text: 'By the end of August 1874 there were about a thousand Chinese on the Palmer, with a temple led by Dr King Chong. By the end of 1874 there were about 1,500, almost 40 per cent of the field’s people.', src: ['kirk93', 'kirk87'] },
+  { date: 'May 1875', title: 'A notice at Sandy Creek', text: 'A notice at Sandy Creek threatened to hang any Chinese man found higher up the creek. Kirkman says it was a sign of anger, not a plan. The large riots that had taken place at Lambing Flat in New South Wales in 1860 and 1861 did not happen on the Palmer.', src: ['kirk93', 'kirk87'] },
+  { date: '1875', title: 'First millionaire miner at Charters Towers', text: 'Frank Stubley became the first millionaire miner on the field.', src: ['ctc'] },
+  { date: 'July and October 1875', title: 'Thousands of Chinese miners; gold sent to Hong Kong', text: 'In 1875 steamers brought thousands more from China. About 9,000 Chinese were on the Palmer in July 1875. In October 1875 two steamers carried 14,000 ounces of gold to Hong Kong, including an 80-ounce nugget.', src: ['kirk93', 'kirk87'] },
+  { date: 'March 1876', title: 'The Hodgkinson rush begins', text: 'After the Hodgkinson rush began, the Palmer was largely left to Chinese miners. Warden Sellheim had to punish a few Europeans who tried to jump Chinese claims. By 1876 there were about 17,000 Chinese and 1,400 Europeans on the field.', src: ['kirk93', 'kirk87'] },
+  { date: '1876', title: 'Queensland passes a bill on Chinese miners', text: 'The Queensland parliament passed a bill that made Chinese and other Asian miners pay a miner’s right of £3, six times the fee for European miners, and business licences of £10. The governor sent the bill to London before approving it. It became law in 1877.', src: ['kirk93', 'kirk87', 'abs150', 'absYB'] },
+  { date: 'January to May 1877', title: '7,708 Chinese miners arrive', text: 'A total of 7,708 Chinese miners arrived on the field in the first five months of 1877, taking the population to about 18,000. By the end of May the average earnings were estimated at only three pennyweights.', src: ['kirk87'] },
+  { date: '1877', title: 'A £10 tax on Chinese arrivals', text: 'Queensland passed a law that put a £10 tax on each Chinese person arriving by ship, allowed one Chinese passenger for every 10 tons of a ship’s size, and refunded the tax to anyone who left within three years without breaking the law or costing the colony money. A later law banned Asian and African miners from new goldfields for three years after a discovery.', flag: 'Sources give the date of the later law as 1877 or 1878.', src: ['hodes', 'abs150', 'absYB', 'kirk87'] },
+  { date: '1877', title: 'Aboriginal people on the Palmer half starved', text: 'The Queenslander reported that Native Police officers said most Aboriginal people on the Palmer were half starved, because the Europeans had taken the watercourses. The paper said that Aboriginal people killed horses and cattle out of necessity.', src: ['kirk84'] },
+  { date: 'From 1877 to 1880', title: 'Fewer Native Police', text: 'From 1877 the numbers of Native Police were reduced across the colony. By 1880 the number was less than half that of 1876. Kirkman writes that by the end of the decade the catastrophic disruption of Aboriginal society and the decline in the numbers of Europeans and Chinese had reduced the level of conflict.', src: ['kirk84'] },
+  { date: '1877 to 1888', title: 'Later laws on Chinese immigration', text: 'Only about 500 new Chinese people arrived in the colony between mid-1877 and 1881. In 1884 Queensland raised the tax to £30. In 1888, after a conference of the colonies, it passed a new law like those in the southern colonies.', src: ['hodes', 'absYB'] },
+  { date: '1894 and 1898', title: 'Measles, then removal of Aboriginal people from Gympie', text: 'A local history society says a measles outbreak in 1894 struck the Aboriginal camp at Gympie, and that in 1898 the surviving Aboriginal people from Gympie were removed to the Bogimbah Creek reserve on Fraser Island.', flag: 'This comes from one local history society article. It should be checked with Kabi Kabi custodians before it is repeated.', src: ['gfhsAb'] },
+  { date: '1897', title: 'A law controlling Aboriginal workers', text: 'Queensland passed the Aboriginals Protection and Restriction of the Sale of Opium Act. Under it, an Aboriginal worker could be employed only under a permit from a protector, and employers had to sign an agreement. Together with later protection laws, it gave the government wide control over the lives of Aboriginal people.', src: ['aph'] },
+  { date: '1900 to 1910', title: 'Highest production at Gympie; Charters Towers slows', text: 'Gympie’s gold production was highest between 1900 and 1910. By 1910 mining at Charters Towers had slowed.', src: ['qsaGympie', 'abs150'] }
+],
+places: [
+  { name: 'Canoona', where: 'About 40 kilometres north-west of Rockhampton, on the Fitzroy River · Darumbal Country', text: [
+    'Canoona was the site of Queensland’s first big rush, in 1858. An estimated 15,000 people were there between September and December 1858. The field was not a fraud, but it could not support that many people.',
+    'The Darumbal people are the Traditional Owners of the Rockhampton and Capricorn Coast area, including the Fitzroy River catchment. No source was found that describes what happened to Darumbal people at Canoona in 1858.'
+  ], src: ['slqCanoona', 'qpCanoona', 'darumbal'] },
+  { name: 'Rockhampton', where: 'Fitzroy River · Darumbal Country', text: [
+    'Rockhampton was proclaimed a town on 25 October 1858, and its first land sales were on 17 and 18 November 1858. A few hundred of the people who came to Canoona stayed and started businesses.'
+  ], src: ['cqu'] },
+  { name: 'Gympie', where: 'Mary River · Kabi Kabi (Gubbi Gubbi) Country', image: 'gympie', text: [
+    'The rush began after James Nash found gold in August 1867. The town was first called Nashville and later Gympie. The photograph above shows Mary Street in 1868, with Tattersall’s, the saleyards, the Bank of New South Wales and the Golden Age Hotel.',
+    'A local history society says that an Aboriginal camp formed at the edge of the town in the late 1860s, and that Aboriginal people worked as guides, carriers and timber workers. It also says they were often paid in rations or goods, not wages. Library records name more than 260 Chinese people on the goldfield, and say they were later gardeners, shopkeepers and miners. The same records say Europeans harassed Chinese people but that the courts did not accept it. Floods sometimes destroyed the Chinese gardens.'
+  ], src: ['qsaGympie', 'grmNash', 'gfhsAb', 'grmChinese', 'gfhsChinese'] },
+  { name: 'Charters Towers', where: 'North Queensland · Country of the Gudjal people and others', image: 'towers', text: [
+    'Gold was found here in December 1871. Four crushing mills were working by the end of September 1872. The Bank of New South Wales branch (photographed about 1875) opened in 1872. Charters Towers became Queensland’s premier goldfield and for a time its second largest city.',
+    'The regional council says the area is the Country of the Gudjal people and others.'
+  ], src: ['ctc', 'abs150'] },
+  { name: 'The Palmer River', where: 'North Queensland', text: [
+    'Gold was reported by the Hann expedition in 1872, and Mulligan and six companions found payable alluvial gold on 29 June 1873. The Palmer gave about 100 tonnes of gold in all. The field was unusual: by 1876 there were about 17,000 Chinese and 1,400 Europeans.',
+    'The rivers were the main source of food for Aboriginal people, and the miners worked in the same rivers for gold. The people of the Palmer River country are the Traditional Owners; this resource does not name them because no source read here does.'
+  ], src: ['kirk84', 'kirk93', 'abs150', 'parks'] },
+  { name: 'Cooktown', where: 'North Queensland coast', image: 'cooktown', text: [
+    'Cooktown was settled from October 1873 as the port for the Palmer River goldfield. The photograph above shows Charlotte Street about 1874.',
+    'In October 1875 two steamers carried 14,000 ounces of gold from the Palmer to Hong Kong, including an 80-ounce nugget.'
+  ], src: ['kirk93', 'kirk87'] },
+  { name: 'Sandy Creek and the Hodgkinson', where: 'North Queensland', text: [
+    'In May 1875 a notice at Sandy Creek threatened to hang any Chinese man found higher up the creek. Kirkman says it was a sign of anger, not a plan. After the Hodgkinson rush began in March 1876, the Palmer was largely left to Chinese miners.'
+  ], src: ['kirk93', 'kirk87'] }
+],
+people: [
+  { kind: 'person', name: 'James Nash', dates: 'Gympie, 1867', text: 'Found gold near the Mary River in August 1867 and wrote on 16 October 1867 to claim the £3,000 reward.', src: ['qsaGympie', 'grmNash'] },
+  { kind: 'person', name: 'John Carne Bidwill', dates: 'Gympie, 1851', text: 'The Queensland State Archives says gold was noticed near Gympie in 1851 by Bidwill.', src: ['qsaGympie'] },
+  { kind: 'person', name: 'Hugh Mosman', dates: 'Charters Towers, 1871 and 1872', text: 'Part of the prospecting party of December 1871 and applied for a protection area for the claim on 26 January 1872.', src: ['ctc'] },
+  { kind: 'person', name: 'George Clarke and Fraser', dates: 'Charters Towers, 1871', text: 'The other two European members of the party of December 1871. The third man’s name is written as John Fraser in one source and James Fraser in another.', src: ['ctc', 'monJupiter'] },
+  { kind: 'person', name: 'Jupiter Mosman', dates: 'Charters Towers, 1871', text: 'An Aboriginal horse boy, credited with finding the gold-bearing quartz. His own name and his people are not known. See Real lives.', src: ['monJupiter', 'slqJupiter', 'ctc'] },
+  { kind: 'person', name: 'W. S. E. M. Charters', text: 'The Gold Commissioner after whom Charters Towers was named.', src: ['ctc'] },
+  { kind: 'person', name: 'Frank Stubley', dates: '1875', text: 'The first millionaire miner at Charters Towers.', src: ['ctc'] },
+  { kind: 'person', name: 'James Venture Mulligan', dates: 'Palmer River, 1873', text: 'Found payable alluvial gold on the Palmer on 29 June 1873 with six companions.', src: ['kirk84', 'parks'] },
+  { kind: 'person', name: 'Dr King Chong', dates: 'Palmer River, 1874', text: 'The leader of a temple on the Palmer in August 1874.', src: ['kirk93'] },
+  { kind: 'person', name: 'Warden Sellheim', dates: 'Palmer River, 1876', text: 'Had to punish a few Europeans who tried to jump Chinese claims.', src: ['kirk93', 'kirk87'] },
+  { kind: 'person', name: 'Taam Sze Pui', dates: 'Palmer River, 1877', text: 'A Chinese man who arrived on the Palmer in 1877 and wrote about the field. See Real lives.', src: ['kirk87'] },
+  { kind: 'group', name: 'Chinese miners and merchants', text: 'Thousands of Chinese people worked the goldfields. Many came to earn money for their families. Many of those who came directly from China were sponsored by Chinese merchants and had to repay a debt before they could mine for themselves.', image: 'digger', src: ['kirk93', 'kirk87'] },
+  { kind: 'group', name: 'The Darumbal people', text: 'Traditional Owners of the Rockhampton and Capricorn Coast area, including the Fitzroy River catchment, where Canoona is.', src: ['darumbal'] },
+  { kind: 'group', name: 'Kabi Kabi (Gubbi Gubbi) people', text: 'The Aboriginal people of the Gympie area. The name Gympie comes from the Gubbi Gubbi word gimpi gimpi.', src: ['qsaGympie', 'gfhsAb'] },
+  { kind: 'group', name: 'The Gudjal people and others', text: 'Named by the regional council as the people of the Charters Towers area.', src: ['ctc'] },
+  { kind: 'group', name: 'The Native Police', text: 'Detachments of Aboriginal troopers led by European officers. They were sent to protect the diggers and to carry out “dispersals”. Kirkman says little is known about the way the force worked.', src: ['kirk84'] },
+  { kind: 'org', name: 'The Hann expedition', dates: '1872', text: 'Reported gold on the Palmer River in 1872.', src: ['kirk84', 'kirk93'] },
+  { kind: 'org', name: 'The Queensland parliament', text: 'Passed the laws of 1876 and 1877 on Chinese miners, and the Aboriginals Protection and Restriction of the Sale of Opium Act in 1897.', src: ['kirk87', 'hodes', 'aph'] }
+],
+lives: [
+  { name: 'Jupiter Mosman', dates: 'Charters Towers, December 1871', text: [
+    'Jupiter was an Aboriginal horse boy in the party of prospectors who found gold at Charters Towers in December 1871. He is credited with finding the gold-bearing quartz. “Jupiter” is the name recorded for him. His own name and his people are not known.',
+    'A book about him says that it took 30 years for his find to be acknowledged and a further 50 years for a monument to be put up. This resource does not say what Jupiter thought or felt, because no source records it.'
+  ], src: ['monJupiter', 'slqJupiter', 'ctc'] },
+  { name: 'James Nash', dates: 'Gympie, 1867', text: [
+    'James Nash found gold near the Mary River in August 1867, at a time when the colony was in a recession. On 16 October 1867 he wrote to claim the government’s £3,000 reward. His letter is held by the Queensland State Archives. The town was first called Nashville.'
+  ], src: ['qsaGympie', 'grmNash'] },
+  { name: 'James Venture Mulligan', dates: 'Palmer River, 1873', text: [
+    'Mulligan and six companions found payable alluvial gold on the Palmer on 29 June 1873. According to Mulligan, the attack of 27 September 1873, when miners forcibly removed Aboriginal people from a camp, was not provoked, and it marked the start of the conflict.'
+  ], src: ['kirk84', 'parks'] },
+  { name: 'Taam Sze Pui', dates: 'Palmer River, 1877', text: [
+    'Taam Sze Pui arrived on the Palmer in 1877, in the same year that 7,708 Chinese miners arrived on the field in five months. He wrote that many of the Chinese miners who had arrived earlier were poor and ill and were thinking of leaving.'
+  ], flag: 'Only a summary of what he wrote was read, so his words are not quoted.', src: ['kirk87'] },
+  { name: 'Dr King Chong and the Chinese community on the Palmer', dates: '1874', text: [
+    'By the end of August 1874 there were about a thousand Chinese on the Palmer, with a temple led by Dr King Chong. By the end of 1874 there were about 1,500 Chinese, almost 40 per cent of the field’s people.'
+  ], src: ['kirk93', 'kirk87'] }
+],
+know: [
+  { t: 'Gympie was called “the town that saved Queensland”, because its gold helped end the recession of the 1860s.', src: ['qsaGympie'] },
+  { t: 'Gympie is named after the Gubbi Gubbi word gimpi gimpi, the name of a stinging tree.', src: ['qsaGympie'] },
+  { t: 'Jupiter’s part in finding gold at Charters Towers took about 30 years to be acknowledged, and a monument was put up a further 50 years later.', src: ['slqJupiter'] },
+  { t: 'Charters Towers became Queensland’s premier goldfield and for a time its second largest city.', src: ['abs150', 'ctc'] },
+  { t: 'The Palmer River field gave about 100 tonnes of gold in all.', src: ['abs150'] },
+  { t: 'In October 1875 two steamers carried 14,000 ounces of gold to Hong Kong, including an 80-ounce nugget.', src: ['kirk93'] },
+  { t: 'By 1876 there were about 17,000 Chinese and 1,400 Europeans on the Palmer River field.', src: ['kirk93'] },
+  { t: 'The large riots that took place at Lambing Flat in New South Wales in 1860 and 1861 did not happen on the Palmer.', src: ['kirk93', 'kirk87'] },
+  { t: 'Chinese miners and Chinese merchants were the chief suppliers of vegetables and stores on the Palmer, according to historian Noreen Kirkman.', src: ['kirk93'] },
+  { t: 'In 1877 the average earnings on the Palmer were estimated at only three pennyweights.', src: ['kirk87'] },
+  { t: 'Canoona was not a fraud, but it could not support anything like 15,000 people.', src: ['qpCanoona'] }
+],
+disagree: [
+  'Who “discovered” gold is not simple. The Queensland State Archives says gold was noticed near Gympie in 1851 by John Carne Bidwill. At the Palmer, the Hann expedition reported gold in 1872 before Mulligan’s find in 1873. At Charters Towers, Jupiter is credited with the find but was not credited for about 30 years.',
+  'The name of the third man in the Charters Towers party is written as John Fraser in one source and James Fraser in another. Only “Fraser” is used here.',
+  'Sources give the date of the law banning Asian and African miners from new goldfields as 1877 or 1878.',
+  'The numbers of Aboriginal people killed on the Palmer in the 1870s are not known. Kirkman writes that little is known about how the Native Police worked.',
+  'No source was found that describes what happened to Darumbal people at Canoona in 1858.',
+  'Some information about Aboriginal people at Gympie, including the 1894 measles outbreak and the 1898 removals, comes from a local history society article. It needs to be checked by Kabi Kabi custodians.',
+  'Only the part of the 1858 Colonial Secretary letter that is quoted in a summary was read. The full letter has not been checked.',
+  'The Queensland Parks page on the Palmer goldfield could not be opened directly. Its text was read through a search summary and should be checked on the page.',
+  'Almost all the records of Aboriginal people and Chinese miners on the Palmer were written by Europeans. Kirkman says the evidence is almost entirely European in origin, and is often hostile or at best indifferent. Chinese miners’ own accounts are rare.'
+],
+care: [
+  'Aboriginal and Torres Strait Islander readers are advised that this resource names people who have died, including Jupiter Mosman and James Nash, and that it says violence against Aboriginal people happened.',
+  'The records of the 1870s often used insulting words about Aboriginal and Chinese people. They are not quoted here. This resource uses the words “Aboriginal people”, “Chinese miners” and “Native Police”.',
+  'The author wants to ask Traditional Owners and Aboriginal community members to review this resource before it is used widely. The people to ask include the Darumbal people for Canoona, Kabi Kabi (Gubbi Gubbi) custodians for Gympie, Gudjal and other Traditional Owner groups for Charters Towers, and Traditional Owners of the Palmer River country. Until that review is done, please treat this resource as a draft.'
+],
+readMore: ['qsaSearch', 'trove'],
+images: {
+  gympie: { file: 'images/mary-street-gympie-1868.jpg', w: 960, h: 622, alt: 'A black and white photograph of a wide dirt street with wooden buildings and groups of men standing in front of them.', caption: 'Mary Street, Gympie, 1868. The buildings include Tattersall’s, the saleyards, the Bank of New South Wales and the Golden Age Hotel.', credit: 'John Oxley Library, State Library of Queensland (public domain)', url: 'https://commons.wikimedia.org/wiki/File:StateLibQld_1_15578_Mary_Street,_Gympie,_1868.jpg' },
+  cooktown: { file: 'images/charlotte-street-cooktown-1874.jpg', w: 960, h: 616, alt: 'A black and white photograph of a street with a few wooden buildings and tents.', caption: 'Charlotte Street, Cooktown, about 1874. Cooktown was the port for the Palmer River goldfield.', credit: 'Unknown photographer, State Library of Queensland (public domain)', url: 'https://commons.wikimedia.org/wiki/File:Charlotte_Street,_Cooktown.jpg' },
+  towers: { file: 'images/charters-towers-bank-1875.jpg', w: 960, h: 564, alt: 'A black and white photograph of a small wooden bank building with a sign, with a horse and cart in front.', caption: 'The Bank of New South Wales at Charters Towers, about 1875. The branch opened in 1872.', credit: 'John Oxley Library, State Library of Queensland (public domain)', url: 'https://commons.wikimedia.org/wiki/File:StateLibQld_1_45675_Charters_Towers_branch_of_the_Bank_of_New_South_Wales,_ca._1875.jpg' },
+  digger: { file: 'images/chinese-gold-digger-1860s.jpg', w: 817, h: 1000, tall: true, alt: 'A black and white photograph of a man in a wide hat with a long pole across his shoulders. A wooden box hangs from one end and a bucket from the other.', caption: 'A Chinese gold digger with his mining tools hung from a pole, in the 1860s. Photograph by Richard Daintree.', credit: 'Richard Daintree, copied by State Library of Queensland (public domain)', url: 'https://commons.wikimedia.org/wiki/File:StateLibQld_2_116084_Chinese_gold_digger_starting_for_work,_ca._1860s.jpg' }
+},
+teacherNotes: [
+  'Before you use this in class, please seek advice from Traditional Owners of your area. This resource has not yet been reviewed by Aboriginal community members.',
+  'Give students the content warning before they start. Tell them they may stop at any time. Check whether any students have family connections to the events.',
+  'Suggested use: students read the Overview and Timeline, choose one rush to study on the Places and Real lives pages, then answer two or three discussion questions.',
+  'The answers are suggestions. They are behind “Show” buttons. The student version has no answers in its code.',
+  'Some of the linked source pages quote offensive words from the records. Look at them before you show them to a class.'
+],
+discuss: [
+  { q: 'Why did thousands of people go to Canoona in 1858, and why did most of them leave?', a: ['A newspaper said gold had been found. The ground taken up by the first diggers could give work to only a very small number of men, and the field could not support about 15,000 people. The governments in Sydney and Melbourne returned most people south. A few hundred stayed, and Rockhampton became a town.', 'Look for: the figure of 15,000, the date of Rockhampton’s proclamation (25 October 1858), and the point that the field was not a fraud.'] },
+  { q: 'Why did the Queensland government offer a reward for gold in 1866, and why was Gympie called “the town that saved Queensland”?', a: ['Queensland was in a recession. A bank had closed, and unemployed men were protesting in Brisbane. The reward was £3,000. The Gympie field brought new people, money and jobs, and its gold helped end the recession.'] },
+  { q: 'Chinese miners worked ground that European miners had left. What did European miners say about them, and what do the records show?', a: ['Chinese miners worked ground left when Europeans rushed to new finds. Many Europeans blamed them for high prices. The records show that Chinese people were the chief suppliers of vegetables and stores on the Palmer.', 'Good answers name at least two claims and test them against evidence.'] },
+  { q: 'List three ways that the gold rushes changed life for Aboriginal people in the places in this resource. Which source do you use for each?', a: ['Examples: the loss of waterholes and food sources on the Palmer (Kirkman; Queensland Parks); forced removal from a camp on 27 September 1873 (Kirkman); Aboriginal workers at Gympie being paid in rations or goods (local history society, to be checked with Kabi Kabi custodians); the Aboriginal camp at Gympie being struck by measles in 1894 and the people removed in 1898 (same source).', 'Mark any answer that goes beyond the sources, so students learn to say what a source does not say.'] },
+  { q: 'Noreen Kirkman writes that the evidence about Aboriginal people on the Palmer is almost entirely European in origin. How does this change what we can know? Which voices are missing?', a: ['The records show European views, so they may miss Aboriginal views and may describe Aboriginal people unfairly. Missing voices include Aboriginal people and many Chinese miners, whose own accounts are rare.', 'Ask what other kinds of evidence might help: oral history, Traditional Owner knowledge, archaeology.'] },
+  { q: 'By 1876 there were about 17,000 Chinese and 1,400 Europeans on the Palmer. Why did the colony’s government make new laws in 1876 and 1877? Were they fair?', a: ['The government and many Europeans feared and resented the number of Chinese miners. The laws made Chinese miners pay more and put a tax of £10 on each arrival.', 'Students should give a reasoned opinion and refer to the facts. A good answer notes that the Palmer law was passed in response to a field where Europeans were a minority.'] },
+  { q: 'Jupiter, the Aboriginal horse boy, is credited with finding gold at Charters Towers, but it took about 30 years for this to be acknowledged. Why might that be? What does it mean that his own name is not known?', a: ['The sources do not say why. Students might suggest that records were kept by the prospectors, and that Aboriginal people were not usually credited.', 'The answer should avoid claiming to know what Jupiter thought.'] },
+  { q: 'Write a paragraph for or against this statement: “The £10 tax on Chinese arrivals in 1877 was a fair way to control immigration.” Use two facts.', a: ['Students should use facts such as the amount of the tax, who paid it, the refund rule and the numbers who arrived in 1877. A good answer deals with the opposite view.'] },
+  { q: 'What would you want to ask Traditional Owners before using this resource with a class? List three questions.', a: ['Examples: Who are the right people to speak about this Country? Which parts are wrong, or hurt? Is there a story or a name that should be told by them and not by the author? Is it all right to name people who have died?'] }
+]
+};
