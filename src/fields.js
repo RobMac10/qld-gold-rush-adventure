@@ -697,4 +697,22 @@ I.map = {
  }
 ]
 };
+// ---------- Mrs Brennan's doorstop (remembered version, added at Robin McKean's request) ----------
+I.sources.boyneValley = { short: 'Boyne Valley history page (archived)', t: 'Boyne Valley community website. “History”. Archived copy, 27 September 2007.', u: 'https://web.archive.org/web/20070927045009/http://www.boynevalley.org.au/history.php', note: 'A community web page with no references. It names a Mrs Brennan as finding a gold nugget on the Boyne Range before the Calliope rush. It does not mention a doorstop or shepherds.' };
+I.sources.robinRecall = { short: 'Robin McKean, remembered version', t: 'A version recalled by Robin McKean; no independent source for the doorstop detail has yet been located.', u: 'https://robmac10.github.io/history.html', note: 'An oral account remembered by the author of this resource. It is not a historical publication and has not been checked against any record.' };
+I.folklore.intro = I.folklore.intro.replace('collects eight that', 'collects nine that');
+I.folklore.stories.push({
+  title: 'Mrs Brennan’s doorstop', where: 'Calliope district · date not known',
+  text: [ 'Mrs Brennan used a stone as a doorstop until visiting shepherds recognised it as gold.' ],
+  from: 'A version recalled by Robin McKean; no independent source for the doorstop detail has yet been located.',
+  known: [
+    'What is documented separately: An archived Boyne Valley community history page names a Mrs Brennan as finding a gold nugget on the Boyne Range before the Calliope rush. That page does not mention a doorstop or shepherds, and it gives no source. CQ Diggings also lists an unconfirmed “Brennan nugget” among early reports from the Calliope diggings, and does not say who Brennan was.',
+    'Why the rest is unproven: No newspaper, record or published history found so far tells the doorstop story. The sources do not say whether the Mrs Brennan of the Boyne Valley page, the Brennan of the early reports and the Mrs Brennan of this story are the same person.'
+  ],
+  src: ['robinRecall', 'boyneValley', 'cqdGladstone']
+});
+I.folkTeach.push({ q: 'The Mrs Brennan doorstop story is a remembered, oral account. What evidence could test it?', a: [
+  'Look for a newspaper report of the time, such as a Gladstone correspondent’s letter, that names Mrs Brennan, the stone or the shepherds. Look for a gold buyer’s or warden’s record, a family letter or diary, or a local history society file. Ask who first told the story, when, and where they heard it.',
+  'Compare what the story says with what the Boyne Valley page and CQ Diggings say. Notice which details appear only in the remembered version. Students can discuss why an oral account can be valuable even when it cannot yet be checked, and why it must be labelled.'
+] });
 })();
